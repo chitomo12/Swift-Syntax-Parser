@@ -27,8 +27,8 @@ class DeclarationParser {
     
     init () {}
     
-    static func parse (_ declaration: DeclGroupSyntax) -> DeclSyntaxObject {
-        // parse here
+    static func parse (_ declaration: some DeclGroupSyntax) -> DeclSyntaxObject {
+        
         var declarationName: String?
         
         if let classDecl = declaration.as(ClassDeclSyntax.self) {
