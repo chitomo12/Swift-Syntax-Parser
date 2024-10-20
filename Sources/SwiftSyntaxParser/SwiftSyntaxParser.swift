@@ -1,7 +1,7 @@
 import Foundation
 import SwiftSyntax
 
-class DeclarationParser {
+public class DeclarationParser {
     
     init () {}
     
