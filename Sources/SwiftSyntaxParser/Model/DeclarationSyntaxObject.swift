@@ -5,7 +5,7 @@
 //  Created by 福田正知 on 2024/10/21.
 //
 
-struct DeclarationSyntaxObject {
+public struct DeclarationSyntaxObject {
     var name: String?
     var variables: [VariableInfo]
     var functions: [String]

@@ -5,7 +5,7 @@ public class DeclarationParser {
     
     init () {}
     
-    static func parse (_ declaration: some DeclGroupSyntax) -> DeclarationSyntaxObject {
+    public static func parse (_ declaration: some DeclGroupSyntax) -> DeclarationSyntaxObject {
         
         var declarationName: String?
         

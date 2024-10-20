@@ -5,7 +5,7 @@
 //  Created by 福田正知 on 2024/10/21.
 //
 
-struct VariableInfo {
+public struct VariableInfo {
     let name: String            // 変数名
     let type: String            // 型情報（配列やオプショナルも含む）
     let isOptional: Bool        // オプショナル型かどうか
