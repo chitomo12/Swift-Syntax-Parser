@@ -13,7 +13,7 @@ let package = Package(
             targets: ["SwiftSyntaxParser"]),
     ],
     dependencies: [
-      .package(url: "https://github.com/swiftlang/swift-syntax", "509.0.0"..<"601.0.0-prerelease")
+      .package(url: "https://github.com/swiftlang/swift-syntax", "600.0.0"..<"601.0.0-prerelease")
     ],
     targets: [
         // Targets are the basic building blocks of a package, defining a module or a test suite.
