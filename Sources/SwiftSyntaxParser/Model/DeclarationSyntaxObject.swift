@@ -6,7 +6,7 @@
 //
 
 public struct DeclarationSyntaxObject {
-    var name: String?
-    var variables: [VariableInfo]
-    var functions: [String]
+    public var name: String?
+    public var variables: [VariableInfo]
+    public var functions: [String]
 }
