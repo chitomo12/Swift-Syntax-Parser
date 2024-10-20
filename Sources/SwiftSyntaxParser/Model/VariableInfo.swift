@@ -6,12 +6,12 @@
 //
 
 public struct VariableInfo {
-    let name: String            // 変数名
-    let type: String            // 型情報（配列やオプショナルも含む）
-    let isOptional: Bool        // オプショナル型かどうか
-    let isArray: Bool           // 配列型かどうか
-    let initialValue: String?   // 初期値（存在しない場合はnil）
-    let attributes: [String]    // 属性リスト (e.g., @State, @Published)
+    public let name: String            // 変数名
+    public let type: String            // 型情報（配列やオプショナルも含む）
+    public let isOptional: Bool        // オプショナル型かどうか
+    public let isArray: Bool           // 配列型かどうか
+    public let initialValue: String?   // 初期値（存在しない場合はnil）
+    public let attributes: [String]    // 属性リスト (e.g., @State, @Published)
 
     init(name: String, type: String, isOptional: Bool, isArray: Bool, initialValue: String?, attributes: [String]) {
         self.name = name
