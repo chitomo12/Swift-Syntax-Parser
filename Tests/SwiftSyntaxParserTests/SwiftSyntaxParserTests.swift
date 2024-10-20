@@ -1,7 +1,7 @@
 import XCTest
 import SwiftParser
-@testable import SwiftSyntaxParser
 import SwiftSyntax
+@testable import SwiftSyntaxParser
 
 final class SwiftSyntaxParserTests: XCTestCase {
     
@@ -30,6 +30,7 @@ final class SwiftSyntaxParserTests: XCTestCase {
                     let parsedClass = DeclarationParser.parse(classDecl)
                     XCTAssertEqual(parsedClass.name, "TestClass")
                     expect.fulfill()
+                    debugPrint(parsedClass)
                 } else if let structDecl = decl.as(StructDeclSyntax.self) {
                     print("Struct Declaration Name: \(structDecl.name.text)")
                 }

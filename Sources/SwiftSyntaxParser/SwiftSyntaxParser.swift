@@ -1,33 +1,11 @@
-// The Swift Programming Language
-// https://docs.swift.org/swift-book
-
 import Foundation
 import SwiftSyntax
-
-// 変数情報を保持するための構造体
-struct VariableInfo {
-    let name: String            // 変数名
-    let type: String            // 型情報（配列やオプショナルも含む）
-    let isOptional: Bool        // オプショナル型かどうか
-    let isArray: Bool           // 配列型かどうか
-    let initialValue: String?   // 初期値（存在しない場合はnil）
-    let attributes: [String]    // 属性リスト (e.g., @State, @Published)
-
-    init(name: String, type: String, isOptional: Bool, isArray: Bool, initialValue: String?, attributes: [String]) {
-        self.name = name
-        self.type = type
-        self.isOptional = isOptional
-        self.isArray = isArray
-        self.initialValue = initialValue
-        self.attributes = attributes
-    }
-}
 
 class DeclarationParser {
     
     init () {}
     
-    static func parse (_ declaration: some DeclGroupSyntax) -> DeclSyntaxObject {
+    static func parse (_ declaration: some DeclGroupSyntax) -> DeclarationSyntaxObject {
         
         var declarationName: String?
         
@@ -85,16 +63,10 @@ class DeclarationParser {
         
         }
         
-        return DeclSyntaxObject(
+        return DeclarationSyntaxObject(
             name: declarationName,
             variables: vars,
             functions: funcs
         )
     }
-}
-
-struct DeclSyntaxObject {
-    var name: String?
-    var variables: [VariableInfo]
-    var functions: [String]
 }

@@ -21,7 +21,6 @@ let package = Package(
         .target(
             name: "SwiftSyntaxParser",
             dependencies: [
-              .product(name: "SwiftSyntaxMacros", package: "swift-syntax"),
               .product(name: "SwiftCompilerPlugin", package: "swift-syntax"),
             ]
         ),
